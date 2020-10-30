@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/coffee_bg" />
+    <EditText
+        android:id="@+id/username_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="@color/coffee"/>
+    <TextView
+        android:id="@+id/toppings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/username_edit_text"
+        android:textColor="@color/coffee"
+        android:layout_alignParentLeft="true"
+        android:textSize="20sp"
+        android:text="TOPPINGS"/>
+    <LinearLayout
+        android:id="@+id/toppingsList"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toppings"
+        android:orientation="vertical">
+        <CheckBox
+            android:id="@+id/wc_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Whipped Cream"
+            android:textSize="20sp"/>
+        <CheckBox
+            android:id="@+id/choco_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Chocolate"
+            android:textSize="20sp"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/qty_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toppingsList"
+        android:text="QUANTITY"
+        android:textColor="@color/coffee"
+        android:textSize="30sp"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"/>
+    <LinearLayout
+        android:id="@+id/qty_list"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/qty_text"
+        >
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="15sp"
+            android:text="-"
+            android:onClick="decrement"
+            android:textColor="@android:color/white"/>
+        <TextView
+            android:id="@+id/quantity_number"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textSize="24sp"
+            android:textColor="@color/coffee"
+            android:layout_margin="8dp"/>
+        <Button
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:textSize="15sp"
+            android:text="+"
+            android:onClick="increment"
+            android:textColor="@android:color/white"/>
+    </LinearLayout>
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/qty_list"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="9dp"
+        android:text=" Per Coffee costs 5£\n Addition of Whipped Cream costs 1£\n Adiition Of Chocolate costs 2£\n"
+        android:textSize="20sp"
+        android:textColor="@color/coffee"/>
+    <Button
+        android:id="@+id/order_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/coffee"
+        android:layout_below="@+id/description"
+        android:layout_centerHorizontal="true"
+        android:text="order"
+        android:onClick="submitOrder"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"/>
+
+    <TextView
+        android:id="@+id/orderSummary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order_button"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/coffee"
+        android:textSize="20sp"
+        android:layout_marginTop="3dp"
+        android:text="Summary"/>
+
+
+
+
+    </RelativeLayout>
+
+</ScrollView>
